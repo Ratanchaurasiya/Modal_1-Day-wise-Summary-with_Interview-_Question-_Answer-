@@ -1,0 +1,545 @@
+# Day 2 – HTML5 Learning Report
+
+## Introduction
+
+On Day 2, I learned many important concepts of HTML5 that help in creating modern and interactive webpages. I practiced creating simple forms, studied semantic elements, learned about SVG graphics, and explored multimedia tags such as audio and video. I also understood the use of anchor tags, meta tags, iframes, and HTML tables. Along with this, I learned the key features and new attributes introduced in HTML5.
+
+---
+
+# 1. Simple HTML Form
+
+Today I learned how to create a simple HTML form for collecting user information such as name, email, password, feedback, and other details.
+
+## Form Elements Learned
+
+* `<form>`
+* `<input>`
+* `<label>`
+* `<textarea>`
+* `<button>`
+* `<select>`
+* `<option>`
+
+## Form Attributes Learned
+
+* `type`
+* `name`
+* `placeholder`
+* `required`
+* `maxlength`
+* `readonly`
+* `disabled`
+* `checked`
+* `autocomplete`
+
+### Theory
+
+HTML forms are used to collect data from users and send it to the server for processing. Forms are one of the most important parts of web development because they help websites interact with users.
+
+---
+
+# 2. Semantic Elements in HTML5
+
+I learned how semantic elements make webpages more meaningful and properly structured.
+
+## Semantic Tags Learned
+
+* `<header>`
+* `<nav>`
+* `<main>`
+* `<section>`
+* `<article>`
+* `<aside>`
+* `<footer>`
+* `<figure>`
+* `<figcaption>`
+
+### Theory
+
+Semantic elements clearly define the purpose of content on a webpage. They improve code readability, website structure, SEO, and accessibility.
+
+### Advantages
+
+* Easy to understand code
+* Better website organization
+* SEO friendly
+* Improves accessibility
+
+---
+
+# 3. SVG Tag and Graphics
+
+Today I studied SVG (Scalable Vector Graphics) and learned how to create shapes using SVG tags.
+
+## Shapes Practiced
+
+* Rectangle → `<rect>`
+* Circle → `<circle>`
+* Triangle → `<polygon>`
+
+## SVG Attributes Learned
+
+* `width`
+* `height`
+* `fill`
+* `stroke`
+* `stroke-width`
+* `cx`
+* `cy`
+* `r`
+* `points`
+
+### Theory
+
+SVG is used to create vector graphics in webpages. SVG graphics do not lose quality when zoomed and are lightweight and responsive.
+
+---
+
+# 4. Audio Tag
+
+I learned how to add audio files to a webpage using the `<audio>` tag.
+
+## Audio Attributes Learned
+
+* `controls`
+* `autoplay`
+* `loop`
+* `muted`
+* `preload`
+
+### Theory
+
+The audio tag is used to play sound or music directly in the browser without external plugins.
+
+---
+
+# 5. Video Tag
+
+I learned how to embed videos in webpages using the `<video>` tag.
+
+## Video Attributes Learned
+
+* `controls`
+* `autoplay`
+* `loop`
+* `muted`
+* `poster`
+* `width`
+* `height`
+
+### Theory
+
+The video tag allows developers to display videos directly inside webpages with built-in controls like play, pause, and volume.
+
+---
+
+# 6. Anchor Tag
+
+I studied the `<a>` tag which is used to create hyperlinks.
+
+## Anchor Tag Attributes
+
+* `href`
+* `target`
+* `_blank`
+* `title`
+* `download`
+
+### Theory
+
+Anchor tags connect one webpage to another webpage, file, email, or section of the same page.
+
+---
+
+# 7. Meta Tag
+
+I learned the use of meta tags inside the `<head>` section.
+
+## Meta Tags Learned
+
+* `charset`
+* `viewport`
+* `description`
+* `keywords`
+* `author`
+
+### Theory
+
+Meta tags provide information about the webpage to browsers and search engines. They help improve SEO and responsive design.
+
+---
+
+# 8. Iframe Tag
+
+I learned how to embed another webpage or video using the `<iframe>` tag.
+
+## Iframe Attributes Learned
+
+* `src`
+* `width`
+* `height`
+* `title`
+* `allowfullscreen`
+
+### Theory
+
+Iframe is used to display another webpage, map, or YouTube video inside the current webpage.
+
+---
+
+# 9. HTML Table
+
+I practiced creating tables using rows and columns.
+
+## Table Tags Learned
+
+* `<table>`
+* `<tr>`
+* `<th>`
+* `<td>`
+* `<caption>`
+
+## Table Attributes Learned
+
+* `border`
+* `cellpadding`
+* `cellspacing`
+* `rowspan`
+* `colspan`
+
+### Theory
+
+HTML tables are used to organize and display data in tabular format.
+
+---
+
+# 10. New Features of HTML5
+
+## Features Learned
+
+* Semantic elements
+* Audio and video support
+* SVG graphics
+* Canvas
+* Drag and drop
+* Local storage
+* Geolocation
+* Responsive web support
+
+### Theory
+
+HTML5 introduced many advanced features that help developers build modern, responsive, and interactive websites without external plugins.
+
+---
+
+# 11. New Input Types in HTML5
+
+## Input Types Learned
+
+* `email`
+* `number`
+* `date`
+* `time`
+* `range`
+* `color`
+* `url`
+* `search`
+* `tel`
+
+### Theory
+
+HTML5 introduced new input types that improve form validation and user experience.
+
+---
+
+# 12. Key Features of HTML
+
+## Key Features
+
+* Easy to learn
+* Platform independent
+* Supports multimedia
+* Hyperlink support
+* Responsive support
+* SEO friendly
+* Fast webpage development
+
+---
+
+# Conclusion
+
+Today I learned many important HTML5 concepts such as forms, semantic elements, SVG graphics, multimedia tags, anchor tags, meta tags, iframe, tables, and new HTML5 features. These topics helped me understand how to create structured, responsive, and interactive webpages using HTML5.
+
+
+
+
+
+
+
+
+
+# HTML5 Interview Questions with Answers
+
+# Basic Level Questions
+
+### 1. What is HTML?
+
+**Answer:**
+HTML (HyperText Markup Language) is the standard language used to create webpages and structure content on the internet.
+
+---
+
+### 2. What is HTML5?
+
+**Answer:**
+HTML5 is the latest version of HTML that provides new features like semantic elements, audio, video, SVG, canvas, and improved form controls.
+
+---
+
+### 3. What is the purpose of the `<form>` tag?
+
+**Answer:**
+The `<form>` tag is used to collect user input such as names, emails, passwords, and feedback and send the data to the server.
+
+---
+
+### 4. What are semantic elements in HTML5?
+
+**Answer:**
+Semantic elements clearly describe the meaning of content on a webpage. Examples include `<header>`, `<footer>`, `<article>`, and `<section>`.
+
+---
+
+### 5. What is the use of the `<audio>` tag?
+
+**Answer:**
+The `<audio>` tag is used to play audio files directly in the browser without external plugins.
+
+---
+
+### 6. What is the purpose of the `<video>` tag?
+
+**Answer:**
+The `<video>` tag is used to embed and play videos on webpages with controls like play, pause, and volume.
+
+---
+
+### 7. What is SVG?
+
+**Answer:**
+SVG (Scalable Vector Graphics) is used to create vector-based graphics like circles, rectangles, and polygons that do not lose quality when zoomed.
+
+---
+
+### 8. What does the `href` attribute do in an anchor tag?
+
+**Answer:**
+The `href` attribute specifies the destination URL or link address in an anchor (`<a>`) tag.
+
+---
+
+### 9. What is the purpose of meta tags?
+
+**Answer:**
+Meta tags provide information about the webpage to browsers and search engines, helping in SEO and responsive design.
+
+---
+
+### 10. What are the advantages of HTML5?
+
+**Answer:**
+
+* Supports multimedia
+* Mobile friendly
+* SEO friendly
+* Supports semantic tags
+* Better form controls
+* Faster and modern web development
+
+---
+
+# Moderate Level Questions
+
+### 1. Difference between HTML and HTML5?
+
+**Answer:**
+HTML5 is the newer version of HTML that includes multimedia support, semantic tags, canvas, SVG, local storage, and improved APIs.
+
+---
+
+### 2. Difference between semantic and non-semantic tags?
+
+**Answer:**
+
+* Semantic tags describe their meaning clearly (`<header>`, `<article>`).
+* Non-semantic tags do not describe content meaning (`<div>`, `<span>`).
+
+---
+
+### 3. Difference between `<section>` and `<article>`?
+
+**Answer:**
+
+* `<section>` groups related content.
+* `<article>` represents independent self-contained content like blogs or news articles.
+
+---
+
+### 4. Explain the purpose of the viewport meta tag.
+
+**Answer:**
+The viewport meta tag helps webpages adjust properly on mobile devices and supports responsive web design.
+
+Example:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+---
+
+### 5. Difference between `readonly` and `disabled` attributes?
+
+**Answer:**
+
+* `readonly` → User cannot edit the field, but the value is submitted.
+* `disabled` → User cannot use the field, and the value is not submitted.
+
+---
+
+### 6. What is the difference between SVG and Canvas?
+
+**Answer:**
+
+* SVG is vector-based and scalable.
+* Canvas is pixel-based and better for complex graphics and animations.
+
+---
+
+### 7. Explain `rowspan` and `colspan` in tables.
+
+**Answer:**
+
+* `rowspan` merges multiple rows.
+* `colspan` merges multiple columns.
+
+---
+
+### 8. How does HTML5 form validation work?
+
+**Answer:**
+HTML5 provides built-in validation using attributes like `required`, `pattern`, `maxlength`, and input types such as `email` and `number`.
+
+---
+
+### 9. What is local storage in HTML5?
+
+**Answer:**
+Local storage stores data in the browser permanently until manually deleted.
+
+---
+
+### 10. What is the purpose of iframe in HTML?
+
+**Answer:**
+Iframe is used to embed another webpage, map, or YouTube video inside the current webpage.
+
+---
+
+# Advanced Level Questions
+
+### 1. Difference between local storage and session storage.
+
+**Answer:**
+
+| Local Storage            | Session Storage                      |
+| ------------------------ | ------------------------------------ |
+| Data remains permanently | Data is removed after browser closes |
+| Storage limit is larger  | Storage limit is smaller             |
+| Shared across tabs       | Available only in one tab            |
+
+---
+
+### 2. How do semantic elements improve SEO?
+
+**Answer:**
+Semantic elements help search engines understand webpage structure and content more clearly, improving SEO rankings.
+
+---
+
+### 3. What are ARIA roles in HTML5?
+
+**Answer:**
+ARIA (Accessible Rich Internet Applications) roles improve accessibility for screen readers and assistive technologies.
+
+Example:
+
+```html
+<button aria-label="Close">X</button>
+```
+
+---
+
+### 4. Explain the security risks of using iframes.
+
+**Answer:**
+
+* Clickjacking attacks
+* Embedding unsafe websites
+* Cross-site scripting risks
+
+These risks can be reduced using sandbox attributes and security policies.
+
+---
+
+### 5. Difference between SVG, Canvas, and WebGL?
+
+**Answer:**
+
+| Technology | Purpose                  |
+| ---------- | ------------------------ |
+| SVG        | Vector graphics          |
+| Canvas     | 2D drawing and animation |
+| WebGL      | 3D graphics rendering    |
+
+---
+
+### 6. How does HTML5 support offline web applications?
+
+**Answer:**
+HTML5 supports offline applications using local storage, cache storage, and service workers.
+
+---
+
+### 7. Explain responsive web design techniques in HTML5.
+
+**Answer:**
+
+* Flexible layouts
+* Media queries
+* Responsive images
+* Viewport meta tag
+
+These techniques help websites work properly on all devices.
+
+---
+
+### 8. What are Progressive Web Applications (PWAs)?
+
+**Answer:**
+PWAs are web applications that behave like mobile apps and support offline access, notifications, and fast loading.
+
+---
+
+### 9. How does lazy loading improve website performance?
+
+**Answer:**
+Lazy loading loads images and videos only when needed, reducing page loading time and improving performance.
+
+---
+
+### 10. Explain the importance of accessibility in HTML5.
+
+**Answer:**
+Accessibility ensures websites can be used by people with disabilities using screen readers, keyboard navigation, and assistive tools.
+

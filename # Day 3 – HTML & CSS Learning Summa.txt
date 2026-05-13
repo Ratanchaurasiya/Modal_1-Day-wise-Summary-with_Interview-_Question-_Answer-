@@ -1,0 +1,186 @@
+# Day 3 – HTML & CSS Learning Summary
+
+Today we created a **static website** project named **Car Hubs**. In this project, we used different **semantic HTML elements** to structure the webpage properly. Semantic elements help make the website organized, readable, and SEO-friendly.
+
+## Semantic Elements Used
+
+* `<header>` → Used for the top section of the website.
+* `<nav>` → Used for the navigation bar and menu links.
+* `<section>` → Used to create different sections of the webpage.
+* `<main>` → Used for the main content area.
+* `<footer>` → Used for the footer section.
+
+We also created a **navigation bar (Navbar)** to move between different sections of the website like Home, About, Cars, and Contact.
+
+---
+
+# Using External Header File
+
+Today we learned how to use a separate HTML file for the header and load it dynamically using JavaScript.
+
+We created:
+
+* `header.html` → Contains navbar/header code.
+* `index.html` → Main webpage file.
+
+We used the following code to load the header file dynamically:
+
+```javascript
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        const headerContainer = document.querySelector('.navbar');
+
+        if (headerContainer) {
+            headerContainer.innerHTML = data;
+        }
+    })
+    .catch(error => console.error('Error loading header:', error));
+```
+
+We also used:
+
+```html
+<div class="navbar"></div>
+
+<section id="home" class="slider-container">
+```
+
+This code helps us insert the `header.html` file into the main webpage automatically. It makes the project cleaner and reusable because we can update the header in one file only.
+
+---
+
+# HTML Code Example
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Hubs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar Container -->
+    <div class="navbar"></div>
+
+    <!-- Home Section -->
+    <section id="home" class="container">
+        <div class="left-box">
+            <h1>Welcome to Car Hubs</h1>
+            <p>Best cars collection website.</p>
+        </div>
+
+        <div class="center-box">
+            <h2>Center Content</h2>
+        </div>
+
+        <div class="right-box">
+            <h2>Right Content</h2>
+        </div>
+    </section>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                const headerContainer = document.querySelector('.navbar');
+
+                if (headerContainer) {
+                    headerContainer.innerHTML = data;
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+
+</body>
+</html>
+```
+
+---
+
+# CSS Code Example
+
+```css
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+
+/* Left Box */
+.left-box{
+    width: 30%;
+    background: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Center Box */
+.center-box{
+    width: 30%;
+    background: lightgreen;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Right Box */
+.right-box{
+    width: 30%;
+    background: lightcoral;
+    padding: 20px;
+    text-align: center;
+}
+```
+
+---
+
+# CSS Properties and Their Uses
+
+| CSS Property      | Use                                                             |
+| ----------------- | --------------------------------------------------------------- |
+| `display: flex`   | Used to arrange items in a row or column.                       |
+| `justify-content` | Aligns items horizontally (left, center, right, space-between). |
+| `align-items`     | Aligns items vertically.                                        |
+| `width`           | Sets the width of an element.                                   |
+| `margin`          | Adds space outside the element.                                 |
+| `padding`         | Adds space inside the element.                                  |
+| `background`      | Sets background color.                                          |
+| `text-align`      | Aligns text left, center, or right.                             |
+| `font-family`     | Changes the text font style.                                    |
+| `box-sizing`      | Controls how width and height are calculated.                   |
+| `gap`             | Adds spacing between flex items.                                |
+| `height`          | Sets the height of an element.                                  |
+| `border`          | Adds border around elements.                                    |
+| `color`           | Changes text color.                                             |
+
+---
+
+# What I Learned Today
+
+* Creating a static website.
+* Using semantic HTML elements.
+* Creating a navigation bar.
+* Using separate HTML files.
+* Loading external files using JavaScript `fetch()`.
+* Starting CSS styling.
+* Creating containers using Flexbox.
+* Aligning content left, center, and right using CSS.
+* Applying CSS properties for webpage design.
