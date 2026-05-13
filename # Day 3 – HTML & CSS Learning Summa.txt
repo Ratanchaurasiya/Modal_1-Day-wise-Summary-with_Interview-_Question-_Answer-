@@ -262,3 +262,850 @@ body{
 * Creating containers using Flexbox.
 * Aligning content left, center, and right using CSS.
 * Applying CSS properties for webpage design.
+
+
+
+
+# HTML & CSS Interview Questions with Detailed Answers
+
+# Basic Level Questions
+
+## 1. What is HTML?
+
+HTML stands for **HyperText Markup Language**. It is the standard language used to create webpages and structure content on the internet.
+
+HTML uses different tags such as `<h1>`, `<p>`, `<img>`, and `<a>` to display text, images, links, tables, forms, and other webpage elements.
+
+### Example:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>This is a webpage.</p>
+</body>
+</html>
+```
+
+---
+
+## 2. What is CSS?
+
+CSS stands for **Cascading Style Sheets**. It is used to design and style HTML webpages.
+
+CSS controls:
+
+* Colors
+* Fonts
+* Layouts
+* Spacing
+* Animations
+* Responsive design
+
+### Example:
+
+```css
+h1{
+    color: blue;
+    text-align: center;
+}
+```
+
+---
+
+## 3. What is the purpose of semantic HTML elements?
+
+Semantic elements clearly describe the meaning of content.
+
+Examples:
+
+* `<header>`
+* `<nav>`
+* `<section>`
+* `<article>`
+* `<footer>`
+
+### Benefits:
+
+* Improves readability
+* Better SEO
+* Helps screen readers
+* Better webpage structure
+
+---
+
+## 4. What is the use of the `<header>` tag?
+
+The `<header>` tag is used for the top section of a webpage.
+
+It usually contains:
+
+* Logo
+* Website title
+* Navigation menu
+* Search bar
+
+### Example:
+
+```html
+<header>
+    <h1>Car Hubs</h1>
+</header>
+```
+
+---
+
+## 5. What is the use of the `<nav>` tag?
+
+The `<nav>` tag is used to create navigation links.
+
+### Example:
+
+```html
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+</nav>
+```
+
+It helps users move between pages.
+
+---
+
+## 6. What is the purpose of the `<section>` tag?
+
+The `<section>` tag divides content into different sections.
+
+### Example:
+
+```html
+<section>
+    <h2>Services</h2>
+    <p>We provide car rentals.</p>
+</section>
+```
+
+---
+
+## 7. What is the role of the `<main>` element?
+
+The `<main>` element contains the main content of the webpage.
+
+There should be only one `<main>` tag per page.
+
+### Example:
+
+```html
+<main>
+    <h2>Main Content</h2>
+</main>
+```
+
+---
+
+## 8. Why is the `<footer>` tag used?
+
+The `<footer>` tag is used for the bottom section of the webpage.
+
+It usually contains:
+
+* Copyright
+* Contact information
+* Social media links
+
+### Example:
+
+```html
+<footer>
+    <p>© 2026 Car Hubs</p>
+</footer>
+```
+
+---
+
+## 9. What is a static website?
+
+A static website shows fixed content to users.
+
+### Features:
+
+* Built using HTML, CSS, and JavaScript
+* No database required
+* Fast loading
+* Simple hosting
+
+### Example:
+
+Portfolio website, company website.
+
+---
+
+## 10. What is the purpose of the `<div>` tag?
+
+The `<div>` tag is a container used to group elements together.
+
+### Example:
+
+```html
+<div class="card">
+    <h2>BMW</h2>
+</div>
+```
+
+It helps in layout and styling.
+
+---
+
+## 11. What is the use of the `<link>` tag in HTML?
+
+The `<link>` tag connects external files like CSS.
+
+### Example:
+
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+---
+
+## 12. Why do we use external CSS files?
+
+External CSS keeps design separate from HTML.
+
+### Advantages:
+
+* Reusable code
+* Easy maintenance
+* Faster editing
+* Cleaner code
+
+---
+
+## 13. What is Flexbox in CSS?
+
+Flexbox is a CSS layout system used to align elements easily.
+
+### Example:
+
+```css
+.container{
+    display: flex;
+}
+```
+
+---
+
+## 14. What does `display: flex` do?
+
+It converts a container into a flex container.
+
+Child elements become flexible items.
+
+### Example:
+
+```css
+.container{
+    display: flex;
+}
+```
+
+---
+
+## 15. What is the use of `justify-content`?
+
+It aligns items horizontally.
+
+### Example:
+
+```css
+justify-content: center;
+```
+
+### Values:
+
+* center
+* flex-start
+* flex-end
+* space-between
+* space-around
+
+---
+
+## 16. What is the use of `align-items`?
+
+It aligns items vertically.
+
+### Example:
+
+```css
+align-items: center;
+```
+
+---
+
+## 17. Difference between `margin` and `padding`.
+
+| Margin                       | Padding                      |
+| ---------------------------- | ---------------------------- |
+| Space outside border         | Space inside border          |
+| Creates gap between elements | Creates space inside element |
+
+---
+
+## 18. What is `box-sizing: border-box`?
+
+It includes padding and border inside the element width.
+
+### Example:
+
+```css
+*{
+    box-sizing: border-box;
+}
+```
+
+This makes layout calculations easier.
+
+---
+
+## 19. What is the purpose of JavaScript `fetch()`?
+
+`fetch()` is used to load data or files asynchronously.
+
+### Example:
+
+```javascript
+fetch('header.html')
+```
+
+It helps load external content dynamically.
+
+---
+
+## 20. Why do we use separate HTML files like `header.html`?
+
+Separate files help create reusable components.
+
+### Benefits:
+
+* Better organization
+* Reusable code
+* Easier maintenance
+
+---
+
+# Moderate Level Questions
+
+## 1. Explain semantic HTML with examples.
+
+Semantic HTML uses meaningful tags that describe content.
+
+### Examples:
+
+```html
+<header></header>
+<nav></nav>
+<section></section>
+<footer></footer>
+```
+
+These tags improve SEO and accessibility.
+
+---
+
+## 2. What are the advantages of using semantic elements?
+
+### Advantages:
+
+* Better webpage structure
+* Easier maintenance
+* SEO improvement
+* Accessibility support
+* Cleaner code
+
+---
+
+## 3. How does a navigation bar work in a website?
+
+A navigation bar contains links to different pages.
+
+### Example:
+
+```html
+<nav>
+    <a href="home.html">Home</a>
+</nav>
+```
+
+Users click links to navigate.
+
+---
+
+## 4. Difference between inline, internal, and external CSS.
+
+| Type         | Description                     |
+| ------------ | ------------------------------- |
+| Inline CSS   | Written inside HTML tag         |
+| Internal CSS | Written inside `<style>`        |
+| External CSS | Written in separate `.css` file |
+
+---
+
+## 5. Explain how Flexbox helps in webpage layout design.
+
+Flexbox helps:
+
+* Align items
+* Create responsive layouts
+* Distribute space evenly
+* Center elements easily
+
+---
+
+## 6. Difference between `justify-content` and `align-items`.
+
+| justify-content      | align-items        |
+| -------------------- | ------------------ |
+| Horizontal alignment | Vertical alignment |
+
+---
+
+## 7. How does `fetch()` work in JavaScript?
+
+`fetch()` sends a request to get data/files.
+
+### Example:
+
+```javascript
+fetch('data.json')
+.then(response => response.json())
+.then(data => console.log(data))
+```
+
+---
+
+## 8. Why is reusable code important in web development?
+
+Reusable code:
+
+* Saves time
+* Reduces repetition
+* Improves maintainability
+* Makes projects scalable
+
+---
+
+## 9. What is the purpose of `querySelector()` in JavaScript?
+
+It selects HTML elements.
+
+### Example:
+
+```javascript
+document.querySelector(".box")
+```
+
+---
+
+## 10. Explain the working of this code:
+
+```javascript
+fetch('header.html')
+```
+
+This code requests the `header.html` file from the server.
+
+The fetched content can then be displayed dynamically on the webpage.
+
+---
+
+## 11. What is the use of `.then()` in JavaScript?
+
+`.then()` handles successful completion of promises.
+
+### Example:
+
+```javascript
+fetch('data.json')
+.then(response => response.json())
+```
+
+---
+
+## 12. Why do we use `.catch()` in JavaScript?
+
+`.catch()` handles errors.
+
+### Example:
+
+```javascript
+.catch(error => console.log(error))
+```
+
+---
+
+## 13. What is responsive web design?
+
+Responsive design makes websites adjust to different screen sizes.
+
+### Devices:
+
+* Mobile
+* Tablet
+* Desktop
+
+---
+
+## 14. What are media queries in CSS?
+
+Media queries apply CSS based on screen size.
+
+### Example:
+
+```css
+@media(max-width:768px){
+    body{
+        background: lightblue;
+    }
+}
+```
+
+---
+
+## 15. Difference between `id` and `class` in HTML.
+
+| id          | class             |
+| ----------- | ----------------- |
+| Unique      | Reusable          |
+| One element | Multiple elements |
+
+---
+
+## 16. What is the purpose of `z-index` in CSS?
+
+`z-index` controls stacking order.
+
+Higher value appears on top.
+
+### Example:
+
+```css
+z-index: 10;
+```
+
+---
+
+## 17. Explain the difference between `position: relative` and `position: absolute`.
+
+| Relative                     | Absolute                 |
+| ---------------------------- | ------------------------ |
+| Moves from original position | Moves relative to parent |
+
+---
+
+## 18. What is the purpose of `transition` in CSS?
+
+`transition` creates smooth animation effects.
+
+### Example:
+
+```css
+transition: 0.5s;
+```
+
+---
+
+## 19. What is the use of `animation` and `@keyframes`?
+
+They create advanced animations.
+
+### Example:
+
+```css
+@keyframes move{
+    from{left:0;}
+    to{left:100px;}
+}
+```
+
+---
+
+## 20. How does Flexbox align items left, center, and right?
+
+Using:
+
+```css
+justify-content: flex-start;
+justify-content: center;
+justify-content: flex-end;
+```
+
+---
+
+# Advanced Level Questions
+
+## 1. Explain the complete workflow of loading external HTML files using JavaScript.
+
+### Steps:
+
+1. JavaScript sends request using `fetch()`
+2. Server returns HTML file
+3. Response converts into text
+4. Content inserted using `innerHTML`
+
+### Example:
+
+```javascript
+fetch('header.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById("header").innerHTML = data;
+})
+```
+
+---
+
+## 2. What are the benefits of component-based design in web development?
+
+### Benefits:
+
+* Reusable components
+* Easy updates
+* Better organization
+* Faster development
+
+---
+
+## 3. How does `fetch()` improve project scalability?
+
+It allows:
+
+* Dynamic loading
+* API integration
+* Modular design
+* Better performance
+
+---
+
+## 4. Explain asynchronous programming in JavaScript.
+
+Asynchronous programming allows tasks to run without blocking other operations.
+
+### Example:
+
+```javascript
+fetch('data.json')
+```
+
+The webpage continues working while data loads.
+
+---
+
+## 5. Difference between synchronous and asynchronous code.
+
+| Synchronous       | Asynchronous       |
+| ----------------- | ------------------ |
+| Runs line by line | Runs independently |
+| Blocks execution  | Non-blocking       |
+
+---
+
+## 6. What is the DOM in JavaScript?
+
+DOM stands for **Document Object Model**.
+
+It represents HTML as objects.
+
+JavaScript uses DOM to:
+
+* Change text
+* Add elements
+* Remove elements
+
+---
+
+## 7. How does `innerHTML` work?
+
+`innerHTML` inserts or changes HTML content.
+
+### Example:
+
+```javascript
+element.innerHTML = "<h1>Hello</h1>";
+```
+
+---
+
+## 8. What are the advantages and disadvantages of using `innerHTML`?
+
+### Advantages:
+
+* Easy to use
+* Fast content updates
+
+### Disadvantages:
+
+* Security risks
+* Replaces existing content
+
+---
+
+## 9. Explain the CSS Box Model.
+
+The Box Model consists of:
+
+1. Content
+2. Padding
+3. Border
+4. Margin
+
+\text{Total Width} = \text{Content} + \text{Padding} + \text{Border} + \text{Margin}
+
+---
+
+## 10. What is the difference between Flexbox and CSS Grid?
+
+| Flexbox         | Grid             |
+| --------------- | ---------------- |
+| One-dimensional | Two-dimensional  |
+| Row OR column   | Rows AND columns |
+
+---
+
+## 11. Explain how `display: flex` changes the behavior of child elements.
+
+Child elements become flexible and align automatically.
+
+They can:
+
+* Resize
+* Align
+* Distribute space
+
+---
+
+## 12. What is the importance of semantic HTML in SEO?
+
+Semantic HTML helps search engines understand webpage structure.
+
+This improves:
+
+* Search ranking
+* Accessibility
+* Content indexing
+
+---
+
+## 13. How does CSS improve user experience?
+
+CSS improves:
+
+* Design
+* Layout
+* Readability
+* Animations
+* Responsiveness
+
+---
+
+## 14. What is the purpose of `overflow` in CSS?
+
+`overflow` controls extra content.
+
+### Values:
+
+* hidden
+* scroll
+* auto
+
+---
+
+## 15. Explain how `transform` and `transition` work together.
+
+`transform` changes element shape or position.
+
+`transition` makes changes smooth.
+
+### Example:
+
+```css
+.box:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+```
+
+---
+
+## 16. What is the role of media queries in responsive design?
+
+Media queries adapt websites for different devices.
+
+### Example:
+
+```css
+@media(max-width:600px)
+```
+
+---
+
+## 17. How can animations improve website interactivity?
+
+Animations:
+
+* Attract users
+* Improve user engagement
+* Provide visual feedback
+* Make UI modern
+
+---
+
+## 18. Explain the difference between `visibility: hidden` and `display: none`.
+
+| visibility: hidden               | display: none              |
+| -------------------------------- | -------------------------- |
+| Element hidden but space remains | Element removed completely |
+
+---
+
+## 19. What are pseudo-elements and pseudo-classes in CSS?
+
+### Pseudo-class:
+
+Used for element states.
+
+Example:
+
+```css
+button:hover
+```
+
+### Pseudo-element:
+
+Used for styling specific parts.
+
+Example:
+
+```css
+p::first-letter
+```
+
+---
+
+## 20. How would you optimize a static website project for better performance?
+
+### Methods:
+
+* Compress images
+* Minify CSS and JS
+* Use external CSS
+* Reduce unnecessary code
+* Use caching
+* Optimize animations
+* Use semantic HTML
+* Make website responsive
+
