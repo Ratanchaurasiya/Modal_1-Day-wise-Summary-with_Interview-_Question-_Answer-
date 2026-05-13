@@ -151,26 +151,104 @@ body{
 ```
 
 ---
+# Common CSS3 Properties and Their Uses
 
-# CSS Properties and Their Uses
-
-| CSS Property      | Use                                                             |
-| ----------------- | --------------------------------------------------------------- |
-| `display: flex`   | Used to arrange items in a row or column.                       |
-| `justify-content` | Aligns items horizontally (left, center, right, space-between). |
-| `align-items`     | Aligns items vertically.                                        |
-| `width`           | Sets the width of an element.                                   |
-| `margin`          | Adds space outside the element.                                 |
-| `padding`         | Adds space inside the element.                                  |
-| `background`      | Sets background color.                                          |
-| `text-align`      | Aligns text left, center, or right.                             |
-| `font-family`     | Changes the text font style.                                    |
-| `box-sizing`      | Controls how width and height are calculated.                   |
-| `gap`             | Adds spacing between flex items.                                |
-| `height`          | Sets the height of an element.                                  |
-| `border`          | Adds border around elements.                                    |
-| `color`           | Changes text color.                                             |
-
+| CSS3 Property               | Use                                                   |
+| --------------------------- | ----------------------------------------------------- |
+| `color`                     | Changes text color.                                   |
+| `background-color`          | Sets background color.                                |
+| `background-image`          | Adds an image as background.                          |
+| `background-size`           | Controls background image size.                       |
+| `background-position`       | Sets background image position.                       |
+| `opacity`                   | Controls transparency level.                          |
+| `width`                     | Sets width of an element.                             |
+| `height`                    | Sets height of an element.                            |
+| `max-width`                 | Sets maximum width.                                   |
+| `min-width`                 | Sets minimum width.                                   |
+| `margin`                    | Adds outer spacing.                                   |
+| `padding`                   | Adds inner spacing.                                   |
+| `border`                    | Adds border around element.                           |
+| `border-radius`             | Creates rounded corners.                              |
+| `box-shadow`                | Adds shadow around element.                           |
+| `text-shadow`               | Adds shadow to text.                                  |
+| `font-size`                 | Changes text size.                                    |
+| `font-family`               | Changes font style.                                   |
+| `font-weight`               | Makes text bold/light.                                |
+| `font-style`                | Makes text italic.                                    |
+| `line-height`               | Sets spacing between lines.                           |
+| `letter-spacing`            | Controls spacing between letters.                     |
+| `text-align`                | Aligns text left, center, right.                      |
+| `text-decoration`           | Adds underline, overline, etc.                        |
+| `text-transform`            | Converts text to uppercase/lowercase.                 |
+| `display`                   | Defines display type (`block`, `flex`, `grid`).       |
+| `visibility`                | Shows or hides element.                               |
+| `overflow`                  | Controls extra content visibility.                    |
+| `position`                  | Sets element position (`relative`, `absolute`, etc.). |
+| `top`                       | Moves element from top.                               |
+| `bottom`                    | Moves element from bottom.                            |
+| `left`                      | Moves element from left.                              |
+| `right`                     | Moves element from right.                             |
+| `z-index`                   | Controls stack order of elements.                     |
+| `float`                     | Places element left or right.                         |
+| `clear`                     | Clears floated elements.                              |
+| `cursor`                    | Changes mouse cursor style.                           |
+| `list-style`                | Styles list bullets/numbers.                          |
+| `outline`                   | Adds outline outside border.                          |
+| `box-sizing`                | Controls width/height calculation.                    |
+| `resize`                    | Allows resizing of element.                           |
+| `filter`                    | Applies effects like blur, brightness.                |
+| `transform`                 | Rotates, scales, or moves elements.                   |
+| `transition`                | Creates smooth animation effects.                     |
+| `animation`                 | Adds animations.                                      |
+| `@keyframes`                | Defines animation steps.                              |
+| `flex-direction`            | Sets flex item direction.                             |
+| `justify-content`           | Aligns flex items horizontally.                       |
+| `align-items`               | Aligns flex items vertically.                         |
+| `flex-wrap`                 | Wraps flex items into multiple lines.                 |
+| `gap`                       | Adds space between flex/grid items.                   |
+| `grid-template-columns`     | Defines grid columns.                                 |
+| `grid-template-rows`        | Defines grid rows.                                    |
+| `grid-gap`                  | Adds spacing between grid items.                      |
+| `object-fit`                | Controls image/video fitting.                         |
+| `clip-path`                 | Clips element into shapes.                            |
+| `media queries`             | Makes website responsive.                             |
+| `transition-delay`          | Delays animation start.                               |
+| `transition-duration`       | Sets transition speed.                                |
+| `animation-duration`        | Sets animation time.                                  |
+| `animation-iteration-count` | Repeats animation multiple times.                     |
+| `scroll-behavior`           | Enables smooth scrolling.                             |
+| `user-select`               | Prevents text selection.                              |
+| `pointer-events`            | Controls mouse interactions.                          |
+| `white-space`               | Controls text wrapping.                               |
+| `word-spacing`              | Adds spacing between words.                           |
+| `column-count`              | Splits text into columns.                             |
+| `columns`                   | Creates multiple columns.                             |
+| `caret-color`               | Changes cursor color in input fields.                 |
+| `accent-color`              | Changes checkbox/radio button color.                  |
+| `backdrop-filter`           | Applies blur behind element.                          |
+| `aspect-ratio`              | Sets width-height ratio.                              |
+| `scroll-snap-type`          | Creates scroll snapping effect.                       |
+| `scroll-margin`             | Adds margin during scrolling.                         |
+| `place-items`               | Aligns grid items easily.                             |
+| `place-content`             | Aligns grid content.                                  |
+| `isolation`                 | Controls stacking context.                            |
+| `mix-blend-mode`            | Blends element with background.                       |
+| `perspective`               | Adds 3D depth effect.                                 |
+| `transform-style`           | Controls 3D child elements.                           |
+| `backface-visibility`       | Hides back side during rotation.                      |
+| `content`                   | Inserts generated content.                            |
+| `counter-reset`             | Resets CSS counter.                                   |
+| `counter-increment`         | Increases counter value.                              |
+| `quotes`                    | Defines quotation marks style.                        |
+| `tab-size`                  | Sets tab space width.                                 |
+| `writing-mode`              | Changes text direction.                               |
+| `direction`                 | Sets text direction (`ltr`, `rtl`).                   |
+| `vertical-align`            | Aligns inline elements vertically.                    |
+| `table-layout`              | Controls table layout method.                         |
+| `caption-side`              | Positions table caption.                              |
+| `empty-cells`               | Controls empty table cell borders.                    |
+| `border-collapse`           | Merges table borders.                                 |
+| `border-spacing`            | Sets spacing between table cells.                     |
 ---
 
 # What I Learned Today
