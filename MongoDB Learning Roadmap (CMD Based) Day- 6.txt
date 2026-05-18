@@ -1,0 +1,202 @@
+MongoDB Learning Roadmap (CMD Based)
+
+MongoDB is a NoSQL database used to store data in JSON-like documents.
+
+You will learn:
+
+Easy Level → Basics
+Moderate Level → CRUD & Queries
+Advanced Level → Aggregation & Optimization
+1. Install MongoDB
+Download MongoDB Community Server
+
+Go to:
+
+MongoDB Community Server
+
+Download:
+
+MongoDB Community Server
+MongoDB Shell (mongosh)
+2. Start MongoDB Server
+
+Open CMD and run:
+
+mongod
+
+If installed correctly, MongoDB server starts on:
+
+mongodb://127.0.0.1:27017
+
+Keep this CMD window open.
+
+3. Open MongoDB Shell
+
+Open another CMD window:
+
+mongosh
+
+Now you are connected to MongoDB.
+
+EASY LEVEL (Beginner)
+4. Show Databases
+show dbs
+5. Create / Use Database
+use carhub
+
+MongoDB creates DB automatically when data is inserted.
+
+6. Create Collection
+
+Collection = Table in SQL
+
+db.createCollection("cars")
+
+Show collections:
+
+show collections
+7. Insert One Document
+
+Document = Row in SQL
+
+db.cars.insertOne({
+   name: "BMW M4",
+   price: 15000000,
+   category: "Sports"
+})
+8. Show Data
+db.cars.find()
+
+Pretty format:
+
+db.cars.find().pretty()
+9. Insert Multiple Documents
+db.cars.insertMany([
+{
+   name: "Audi R8",
+   price: 27000000,
+   category: "Sports"
+},
+{
+   name: "Tesla Model S",
+   price: 12000000,
+   category: "Electric"
+}
+])
+10. Find Specific Data
+Find One
+db.cars.findOne({name: "Audi R8"})
+Find Sports Cars
+db.cars.find({category: "Sports"})
+MODERATE LEVEL
+11. Update Data
+Update One
+db.cars.updateOne(
+   {name: "BMW M4"},
+   {$set: {price: 16000000}}
+)
+12. Update Many
+db.cars.updateMany(
+   {category: "Sports"},
+   {$set: {brand: "Luxury"}}
+)
+13. Delete Data
+Delete One
+db.cars.deleteOne({name: "Tesla Model S"})
+Delete Many
+db.cars.deleteMany({category: "Sports"})
+14. Sorting
+Low to High
+db.cars.find().sort({price: 1})
+High to Low
+db.cars.find().sort({price: -1})
+15. Limit Data
+db.cars.find().limit(3)
+16. Count Documents
+db.cars.countDocuments()
+17. Comparison Operators
+Greater Than
+db.cars.find({price: {$gt: 10000000}})
+Less Than
+db.cars.find({price: {$lt: 20000000}})
+Between
+db.cars.find({
+   price: {
+      $gt: 10000000,
+      $lt: 30000000
+   }
+})
+18. Logical Operators
+AND
+db.cars.find({
+   $and: [
+      {category: "Sports"},
+      {price: {$gt: 10000000}}
+   ]
+})
+OR
+db.cars.find({
+   $or: [
+      {category: "Electric"},
+      {category: "Luxury"}
+   ]
+})
+ADVANCED LEVEL
+19. Projection
+
+Show only specific fields:
+
+db.cars.find(
+   {},
+   {name: 1, price: 1, _id: 0}
+)
+20. Aggregation Framework
+Average Price
+db.cars.aggregate([
+{
+   $group: {
+      _id: "$category",
+      avgPrice: {$avg: "$price"}
+   }
+}
+])
+21. Group By Category
+db.cars.aggregate([
+{
+   $group: {
+      _id: "$category",
+      totalCars: {$sum: 1}
+   }
+}
+])
+22. Indexing
+
+Improve performance:
+
+db.cars.createIndex({name: 1})
+
+See indexes:
+
+db.cars.getIndexes()
+23. Text Search
+
+Create text index:
+
+db.cars.createIndex({name: "text"})
+
+Search:
+
+db.cars.find({
+   $text: {$search: "BMW"}
+})
+24. Backup Database
+
+CMD:
+
+mongodump
+
+Restore:
+
+mongorestore
+25. Exit MongoDB Shell
+exit
