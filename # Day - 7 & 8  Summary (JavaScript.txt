@@ -1,0 +1,1423 @@
+# Day - 7 & 8 Summary (JavaScript / jQuery DOM Manipulation & Product Page Features)
+
+Today you learned how to:
+
+1. Add loading on a product page
+2. Add elements dynamically using JavaScript
+3. Change values/text inside tags
+4. Remove elements
+5. Add options in radio buttons & checkboxes dynamically
+6. Add Sort functionality
+7. Add Filter functionality for category pages
+8. Use basic JavaScript and jQuery DOM manipulation
+
+---
+
+# 1. Add Loading in Product Page
+
+## What is Loading?
+
+Loading means showing a message, spinner, or animation while data/products are being fetched from API or database.
+
+Example:
+
+* "Loading..."
+* Spinner animation
+* Skeleton loader
+
+---
+
+## HTML
+
+```html
+<div id="loader">
+    Loading Products...
+</div>
+
+<div id="products"></div>
+```
+
+---
+
+## JavaScript
+
+```javascript
+const loader = document.getElementById("loader");
+const products = document.getElementById("products");
+
+loader.style.display = "block";
+
+setTimeout(() => {
+    loader.style.display = "none";
+
+    products.innerHTML = `
+        <h2>Product 1</h2>
+        <h2>Product 2</h2>
+        <h2>Product 3</h2>
+    `;
+}, 3000);
+```
+
+---
+
+## Explanation
+
+| Code                | Meaning              |
+| ------------------- | -------------------- |
+| `getElementById()`  | Select element       |
+| `display = "block"` | Show loader          |
+| `setTimeout()`      | Delay execution      |
+| `innerHTML`         | Add HTML dynamically |
+| `display = "none"`  | Hide loader          |
+
+---
+
+# 2. Add Element in `<p>` Tag or Any Tag
+
+## HTML
+
+```html
+<p id="demo"></p>
+```
+
+---
+
+## JavaScript
+
+```javascript
+document.getElementById("demo").innerHTML = "Hello Ratan";
+```
+
+---
+
+## Output
+
+```html
+Hello Ratan
+```
+
+---
+
+# Add New Element Dynamically
+
+## JavaScript
+
+```javascript
+const heading = document.createElement("h1");
+
+heading.innerText = "Welcome to JavaScript";
+
+document.body.appendChild(heading);
+```
+
+---
+
+## Explanation
+
+| Method            | Work                     |
+| ----------------- | ------------------------ |
+| `createElement()` | Create new element       |
+| `innerText`       | Add text                 |
+| `appendChild()`   | Add element into webpage |
+
+---
+
+# 3. Change the Value Using JavaScript
+
+## HTML
+
+```html
+<h1 id="title">Old Title</h1>
+```
+
+---
+
+## JavaScript
+
+```javascript
+document.getElementById("title").innerHTML = "New Title";
+```
+
+---
+
+## Change Input Value
+
+### HTML
+
+```html
+<input type="text" id="name">
+```
+
+### JavaScript
+
+```javascript
+document.getElementById("name").value = "Ratan";
+```
+
+---
+
+# 4. Remove the Element
+
+## HTML
+
+```html
+<h1 id="removeMe">Delete Me</h1>
+```
+
+---
+
+## JavaScript
+
+```javascript
+document.getElementById("removeMe").remove();
+```
+
+---
+
+## Explanation
+
+`remove()` deletes the element from webpage.
+
+---
+
+# 5. Add Radio Button Dynamically
+
+## HTML
+
+```html
+<div id="radioBox"></div>
+```
+
+---
+
+## JavaScript
+
+```javascript
+const radio = `
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+`;
+
+document.getElementById("radioBox").innerHTML = radio;
+```
+
+---
+
+# 6. Add Checkbox Dynamically
+
+## HTML
+
+```html
+<div id="checkBox"></div>
+```
+
+---
+
+## JavaScript
+
+```javascript
+const checkbox = `
+<input type="checkbox"> HTML
+<input type="checkbox"> CSS
+<input type="checkbox"> JavaScript
+`;
+
+document.getElementById("checkBox").innerHTML = checkbox;
+```
+
+---
+
+# 7. Add Option Dynamically in Select Tag
+
+## HTML
+
+```html
+<select id="course"></select>
+```
+
+---
+
+## JavaScript
+
+```javascript
+const select = document.getElementById("course");
+
+const option = document.createElement("option");
+
+option.text = "JavaScript";
+
+select.add(option);
+```
+
+---
+
+# 8. Sort Function in Category/Product Page
+
+## What is Sorting?
+
+Sorting arranges products:
+
+* Low to High price
+* High to Low price
+* A-Z
+* Z-A
+
+---
+
+# Example Product Array
+
+```javascript
+const products = [
+    {name: "Bag", price: 500},
+    {name: "Shoes", price: 1000},
+    {name: "Watch", price: 700}
+];
+```
+
+---
+
+# Sort Low to High
+
+```javascript
+products.sort((a, b) => a.price - b.price);
+
+console.log(products);
+```
+
+---
+
+# Sort High to Low
+
+```javascript
+products.sort((a, b) => b.price - a.price);
+
+console.log(products);
+```
+
+---
+
+# Explanation
+
+| Code                | Meaning          |
+| ------------------- | ---------------- |
+| `sort()`            | Sort array       |
+| `a.price - b.price` | Ascending order  |
+| `b.price - a.price` | Descending order |
+
+---
+
+# 9. Filter Function in Category Page
+
+## What is Filter?
+
+Filter shows selected products only.
+
+Example:
+
+* Only Bags
+* Only Shoes
+* Only Electronics
+
+---
+
+## Example
+
+```javascript
+const products = [
+    {name: "Bag", category: "fashion"},
+    {name: "Laptop", category: "electronics"},
+    {name: "Shoes", category: "fashion"}
+];
+```
+
+---
+
+# Filter Fashion Products
+
+```javascript
+const result = products.filter((item) => {
+    return item.category === "fashion";
+});
+
+console.log(result);
+```
+
+---
+
+# Explanation
+
+| Method     | Work                  |
+| ---------- | --------------------- |
+| `filter()` | Filter data           |
+| `return`   | Return matching items |
+
+---
+
+# 10. jQuery Example
+
+## Include jQuery CDN
+
+```html
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+```
+
+---
+
+# Change Text Using jQuery
+
+```javascript
+$("#demo").text("Hello jQuery");
+```
+
+---
+
+# Hide Element
+
+```javascript
+$("#demo").hide();
+```
+
+---
+
+# Show Element
+
+```javascript
+$("#demo").show();
+```
+
+---
+
+# Add Element
+
+```javascript
+$("body").append("<h1>New Heading</h1>");
+```
+
+---
+
+# Remove Element
+
+```javascript
+$("#demo").remove();
+```
+
+---
+
+# Complete Product Filter + Sort Example
+
+## HTML
+
+```html
+<select id="sort">
+    <option value="low">Low to High</option>
+    <option value="high">High to Low</option>
+</select>
+
+<button onclick="filterFashion()">Fashion</button>
+
+<div id="output"></div>
+```
+
+---
+
+## JavaScript
+
+```javascript
+const products = [
+    {name: "Bag", category: "fashion", price: 500},
+    {name: "Laptop", category: "electronics", price: 50000},
+    {name: "Shoes", category: "fashion", price: 1500}
+];
+
+function display(data) {
+    let result = "";
+
+    data.forEach((item) => {
+        result += `
+            <h3>${item.name} - ${item.price}</h3>
+        `;
+    });
+
+    document.getElementById("output").innerHTML = result;
+}
+
+display(products);
+
+document.getElementById("sort").addEventListener("change", function() {
+
+    if(this.value === "low") {
+        products.sort((a,b) => a.price - b.price);
+    } else {
+        products.sort((a,b) => b.price - a.price);
+    }
+
+    display(products);
+});
+
+function filterFashion() {
+
+    const filtered = products.filter((item) => {
+        return item.category === "fashion";
+    });
+
+    display(filtered);
+}
+```
+
+---
+
+# Important JavaScript Methods Learned
+
+| Method               | Purpose             |
+| -------------------- | ------------------- |
+| `innerHTML`          | Add HTML            |
+| `innerText`          | Add text            |
+| `createElement()`    | Create element      |
+| `appendChild()`      | Add element         |
+| `remove()`           | Remove element      |
+| `sort()`             | Sort array          |
+| `filter()`           | Filter array        |
+| `addEventListener()` | Add event           |
+| `value`              | Get/set input value |
+
+---
+
+# Easy Interview Questions
+
+## 1. What is DOM?
+
+### Answer:
+
+DOM stands for Document Object Model.
+It allows JavaScript to access and manipulate HTML elements.
+
+---
+
+## 2. What is `innerHTML`?
+
+### Answer:
+
+`innerHTML` is used to add or change HTML content inside an element.
+
+Example:
+
+```javascript
+element.innerHTML = "<h1>Hello</h1>";
+```
+
+---
+
+## 3. Difference between `innerText` and `innerHTML`?
+
+### Answer:
+
+| innerText      | innerHTML      |
+| -------------- | -------------- |
+| Adds text only | Adds HTML also |
+| No HTML tags   | HTML tags work |
+
+---
+
+## 4. What is `createElement()`?
+
+### Answer:
+
+It creates a new HTML element dynamically.
+
+Example:
+
+```javascript
+document.createElement("h1");
+```
+
+---
+
+## 5. What is `appendChild()`?
+
+### Answer:
+
+It adds a new element inside another element.
+
+---
+
+# Moderate Interview Questions
+
+## 1. What is the difference between `filter()` and `map()`?
+
+### Answer:
+
+| filter()               | map()                  |
+| ---------------------- | ---------------------- |
+| Filters data           | Transforms data        |
+| Returns matching items | Returns modified array |
+
+---
+
+## 2. What is event handling in JavaScript?
+
+### Answer:
+
+Event handling means responding to user actions like:
+
+* click
+* hover
+* input
+* submit
+
+Example:
+
+```javascript
+button.addEventListener("click", function(){
+    alert("Button clicked");
+});
+```
+
+---
+
+## 3. Explain sorting in JavaScript.
+
+### Answer:
+
+Sorting arranges array elements in ascending or descending order using `sort()` method.
+
+Example:
+
+```javascript
+numbers.sort((a,b) => a-b);
+```
+
+---
+
+## 4. What is dynamic DOM manipulation?
+
+### Answer:
+
+Changing webpage content using JavaScript without reloading page.
+
+Examples:
+
+* Add element
+* Delete element
+* Update text
+* Create cards dynamically
+
+---
+
+# Advanced Interview Questions
+
+## 1. Difference between `==` and `===`
+
+### Answer:
+
+| `==`                    | `===`                     |
+| ----------------------- | ------------------------- |
+| Checks value only       | Checks value and datatype |
+| Type conversion happens | No conversion             |
+
+Example:
+
+```javascript
+5 == "5"   // true
+5 === "5"  // false
+```
+
+---
+
+## 2. Explain callback function.
+
+### Answer:
+
+A callback function is passed as an argument to another function.
+
+Example:
+
+```javascript
+function greet(name, callback){
+    console.log(name);
+    callback();
+}
+
+greet("Ratan", function(){
+    console.log("Welcome");
+});
+```
+
+---
+
+## 3. What is asynchronous JavaScript?
+
+### Answer:
+
+Asynchronous JavaScript allows tasks to run without blocking execution.
+
+Examples:
+
+* API calls
+* setTimeout
+* fetch()
+
+---
+
+## 4. What is the difference between `let`, `var`, and `const`?
+
+### Answer:
+
+| var             | let            | const           |
+| --------------- | -------------- | --------------- |
+| Old keyword     | Modern keyword | Constant value  |
+| Function scoped | Block scoped   | Block scoped    |
+| Can reassign    | Can reassign   | Cannot reassign |
+
+---
+
+# Real Project Use Cases
+
+| Feature         | Real Website Example     |
+| --------------- | ------------------------ |
+| Loading         | Amazon product loading   |
+| Filter          | Flipkart category filter |
+| Sort            | Myntra sorting           |
+| Dynamic DOM     | React applications       |
+| Checkbox filter | Ecommerce websites       |
+
+---
+
+# Advanced Interview Questions & Detailed Answers
+
+## JavaScript / DOM / jQuery / Product Page / Sorting & Filtering
+
+---
+
+# 1. What is the Difference Between `innerHTML`, `innerText`, and `textContent`?
+
+## Answer
+
+| Property      | Description                          |
+| ------------- | ------------------------------------ |
+| `innerHTML`   | Reads or writes HTML content         |
+| `innerText`   | Reads visible text only              |
+| `textContent` | Reads all text including hidden text |
+
+---
+
+## Example
+
+```html id="92vz7v"
+<div id="demo">
+    <h1>Hello</h1>
+</div>
+```
+
+```javascript id="bywwy4"
+const element = document.getElementById("demo");
+
+console.log(element.innerHTML);
+console.log(element.innerText);
+console.log(element.textContent);
+```
+
+---
+
+## Output
+
+```javascript id="vv6t6r"
+<h1>Hello</h1>
+
+Hello
+
+Hello
+```
+
+---
+
+# 2. Explain Event Delegation in JavaScript
+
+## Answer
+
+Event Delegation means adding one event listener to a parent element instead of adding listeners to multiple child elements.
+
+It improves:
+
+* Performance
+* Memory optimization
+* Dynamic element handling
+
+---
+
+## Example
+
+```html id="s6b8w8"
+<ul id="list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+```
+
+```javascript id="qk9vmb"
+document.getElementById("list").addEventListener("click", function(e){
+
+    if(e.target.tagName === "LI"){
+        console.log(e.target.innerText);
+    }
+
+});
+```
+
+---
+
+## Benefits
+
+✅ Better performance
+✅ Less memory usage
+✅ Handles dynamic elements automatically
+
+---
+
+# 3. Explain `filter()`, `map()`, and `reduce()`
+
+## Answer
+
+These are advanced array methods.
+
+---
+
+## `filter()`
+
+Returns matching elements.
+
+```javascript id="mpcqyc"
+const numbers = [10,20,30,40];
+
+const result = numbers.filter(num => num > 20);
+
+console.log(result);
+```
+
+### Output
+
+```javascript id="6w7qsw"
+[30,40]
+```
+
+---
+
+## `map()`
+
+Transforms array elements.
+
+```javascript id="c7e7eb"
+const nums = [1,2,3];
+
+const square = nums.map(num => num * num);
+
+console.log(square);
+```
+
+---
+
+## Output
+
+```javascript id="owj7i2"
+[1,4,9]
+```
+
+---
+
+## `reduce()`
+
+Reduces array to single value.
+
+```javascript id="8azm4s"
+const nums = [1,2,3,4];
+
+const total = nums.reduce((acc, curr) => acc + curr, 0);
+
+console.log(total);
+```
+
+---
+
+## Output
+
+```javascript id="jyh31d"
+10
+```
+
+---
+
+# 4. Explain Debouncing in Search Filter
+
+## Answer
+
+Debouncing delays function execution until the user stops typing.
+
+Used in:
+
+* Search bars
+* API requests
+* Product filters
+
+---
+
+## Example
+
+```javascript id="qk9lt5"
+function debounce(func, delay){
+
+    let timer;
+
+    return function(){
+
+        clearTimeout(timer);
+
+        timer = setTimeout(() => {
+            func();
+        }, delay);
+
+    };
+
+}
+```
+
+---
+
+## Why Important?
+
+Without debounce:
+
+* API calls happen many times
+
+With debounce:
+
+* Better performance
+* Less server load
+
+---
+
+# 5. Explain Local Storage in JavaScript
+
+## Answer
+
+Local Storage stores data in browser permanently.
+
+---
+
+## Save Data
+
+```javascript id="blwz2d"
+localStorage.setItem("username", "Ratan");
+```
+
+---
+
+## Get Data
+
+```javascript id="psw1cq"
+console.log(localStorage.getItem("username"));
+```
+
+---
+
+## Remove Data
+
+```javascript id="8q0llf"
+localStorage.removeItem("username");
+```
+
+---
+
+## Real Use Cases
+
+✅ Cart data
+✅ Dark mode
+✅ Login token
+✅ Product filters
+
+---
+
+# 6. Explain Difference Between `null` and `undefined`
+
+## Answer
+
+| null                    | undefined             |
+| ----------------------- | --------------------- |
+| Intentional empty value | Variable not assigned |
+| Object type             | Undefined type        |
+
+---
+
+## Example
+
+```javascript id="jsd6g7"
+let a = null;
+let b;
+
+console.log(a);
+console.log(b);
+```
+
+---
+
+# 7. Explain Closures in JavaScript
+
+## Answer
+
+Closure means a function remembers variables from its outer scope even after outer function execution ends.
+
+---
+
+## Example
+
+```javascript id="4jlwm5"
+function outer(){
+
+    let count = 0;
+
+    return function(){
+
+        count++;
+
+        console.log(count);
+
+    };
+
+}
+
+const counter = outer();
+
+counter();
+counter();
+```
+
+---
+
+## Output
+
+```javascript id="76tkmg"
+1
+2
+```
+
+---
+
+# 8. Explain Asynchronous JavaScript
+
+## Answer
+
+Async JavaScript allows non-blocking operations.
+
+Examples:
+
+* API fetching
+* Database requests
+* Timers
+
+---
+
+## Example
+
+```javascript id="ewt77z"
+console.log("Start");
+
+setTimeout(() => {
+    console.log("After 2 seconds");
+}, 2000);
+
+console.log("End");
+```
+
+---
+
+## Output
+
+```javascript id="8uwn4v"
+Start
+End
+After 2 seconds
+```
+
+---
+
+# 9. Explain Promises in JavaScript
+
+## Answer
+
+Promises handle asynchronous operations.
+
+Promise states:
+
+* Pending
+* Resolved
+* Rejected
+
+---
+
+## Example
+
+```javascript id="3rtqkq"
+const promise = new Promise((resolve, reject) => {
+
+    let success = true;
+
+    if(success){
+        resolve("Data Loaded");
+    }else{
+        reject("Error");
+    }
+
+});
+
+promise
+.then(data => console.log(data))
+.catch(error => console.log(error));
+```
+
+---
+
+# 10. Explain `async` and `await`
+
+## Answer
+
+`async/await` makes asynchronous code cleaner.
+
+---
+
+## Example
+
+```javascript id="nng8v9"
+async function getData(){
+
+    return "Hello";
+
+}
+
+getData().then(data => console.log(data));
+```
+
+---
+
+# 11. Explain Product Filtering Logic in Ecommerce Website
+
+## Answer
+
+Filtering works by checking conditions.
+
+Example:
+
+* Category
+* Price
+* Rating
+* Brand
+
+---
+
+## Example
+
+```javascript id="u7lf1q"
+const products = [
+    {name:"Bag", category:"fashion"},
+    {name:"Laptop", category:"electronics"}
+];
+
+const fashion = products.filter(item => item.category === "fashion");
+
+console.log(fashion);
+```
+
+---
+
+# 12. Explain Product Sorting Logic
+
+## Answer
+
+Sorting arranges products.
+
+Types:
+
+* Price Low → High
+* Price High → Low
+* Name A → Z
+
+---
+
+## Example
+
+```javascript id="vgsq6o"
+products.sort((a,b) => a.price - b.price);
+```
+
+---
+
+# 13. Explain DOM Traversing
+
+## Answer
+
+DOM Traversing means moving between HTML elements.
+
+---
+
+## Methods
+
+| Method                   | Work             |
+| ------------------------ | ---------------- |
+| `parentElement`          | Access parent    |
+| `children`               | Access children  |
+| `nextElementSibling`     | Next element     |
+| `previousElementSibling` | Previous element |
+
+---
+
+## Example
+
+```javascript id="m0m9oa"
+const child = document.getElementById("child");
+
+console.log(child.parentElement);
+```
+
+---
+
+# 14. Explain Memory Leak in JavaScript
+
+## Answer
+
+Memory leak happens when unused memory is not released.
+
+Reasons:
+
+* Unremoved event listeners
+* Large unused arrays
+* Global variables
+
+---
+
+## Bad Example
+
+```javascript id="d03j7r"
+let data = [];
+
+function add(){
+    data.push(new Array(1000000));
+}
+```
+
+---
+
+# 15. Explain Difference Between `call()`, `apply()`, and `bind()`
+
+## Answer
+
+These methods control `this` keyword.
+
+---
+
+## Example
+
+```javascript id="sdwz2i"
+const person = {
+    name: "Ratan"
+};
+
+function greet(city){
+    console.log(this.name + " " + city);
+}
+
+greet.call(person, "Ahmedabad");
+```
+
+---
+
+## Difference Table
+
+| Method    | Arguments            |
+| --------- | -------------------- |
+| `call()`  | Separate arguments   |
+| `apply()` | Array arguments      |
+| `bind()`  | Returns new function |
+
+---
+
+# 16. Explain jQuery Advantages
+
+## Answer
+
+jQuery simplifies JavaScript.
+
+---
+
+## Features
+
+✅ Easier DOM manipulation
+✅ Easier event handling
+✅ Cross-browser support
+✅ Animations
+✅ AJAX support
+
+---
+
+## Example
+
+```javascript id="h5hm6j"
+$("#demo").hide();
+```
+
+---
+
+# 17. Explain AJAX
+
+## Answer
+
+AJAX loads data without refreshing page.
+
+Used in:
+
+* Product pages
+* Search suggestions
+* Live filtering
+
+---
+
+## Example
+
+```javascript id="3pqwnv"
+fetch("https://api.example.com/products")
+.then(response => response.json())
+.then(data => console.log(data));
+```
+
+---
+
+# 18. Explain Virtual DOM
+
+## Answer
+
+Virtual DOM is a lightweight copy of Real DOM.
+
+Used in:
+
+* React
+
+---
+
+## Benefits
+
+✅ Faster updates
+✅ Better performance
+✅ Efficient rendering
+
+---
+
+# 19. Explain Difference Between `let`, `const`, and `var`
+
+## Answer
+
+| Feature  | var      | let   | const |
+| -------- | -------- | ----- | ----- |
+| Scope    | Function | Block | Block |
+| Reassign | Yes      | Yes   | No    |
+| Hoisting | Yes      | Yes   | Yes   |
+
+---
+
+# 20. Explain API Integration in Product Page
+
+## Answer
+
+API integration fetches product data from backend/server.
+
+---
+
+## Example
+
+```javascript id="clrn0x"
+async function getProducts(){
+
+    const response = await fetch("https://dummyjson.com/products");
+
+    const data = await response.json();
+
+    console.log(data);
+
+}
+
+getProducts();
+```
+
+---
+
+# Advanced Real Interview Questions
+
+## Q1. How would you optimize a large product filtering system?
+
+### Answer
+
+Techniques:
+
+* Debouncing
+* Pagination
+* Lazy loading
+* Efficient algorithms
+* Caching
+
+---
+
+## Q2. How does React improve DOM performance?
+
+### Answer
+
+React uses Virtual DOM.
+
+Instead of updating entire page:
+
+* React compares changes
+* Updates only changed elements
+
+---
+
+## Q3. What happens when JavaScript code executes?
+
+### Answer
+
+JavaScript engine:
+
+1. Creates Execution Context
+2. Memory Allocation
+3. Code Execution
+4. Call Stack Management
+
+---
+
+## Q4. Explain Event Bubbling and Capturing.
+
+### Answer
+
+## Event Bubbling
+
+Event moves child → parent.
+
+## Event Capturing
+
+Event moves parent → child.
+
+---
+
+# Final Advanced Revision
+
+## Important Topics
+
+✅ Closures
+✅ Promises
+✅ Async/Await
+✅ Event Delegation
+✅ Debouncing
+✅ Local Storage
+✅ API Fetching
+✅ Product Filtering
+✅ Sorting Logic
+✅ AJAX
+✅ DOM Traversing
+✅ Virtual DOM
+✅ Memory Optimization
+✅ jQuery Advanced Concepts
+
